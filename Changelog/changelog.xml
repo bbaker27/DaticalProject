@@ -7,4 +7,10 @@
             </column>
         </createTable>
     </changeSet>
+    <changeSet author="bbaker27" id="20160923093809740_select_from_dual2" labels="TEST_TABLE,select_from_dual2">
+        <comment>
+            adding sql2
+        </comment>
+        <sqlFile path="sql/20160923093809740_select_from_dual2.sql" endDelimiter=";" splitStatements="true" stripComments="false" />
+    </changeSet>
 </databaseChangeLog>
