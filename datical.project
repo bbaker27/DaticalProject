@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <dbproject:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dbproject="http://datical.com/db/project/1.0" name="DeployPackager" storedLogicExternal="true" deployThreshold="stopOnError" runtimeCredentials="false" multiSchema="false" dbSchemaDefinition="dbDef" enableRowCount="true">
-  <dbDefs xsi:type="dbproject:OracleDbDef" name="DEV" driver="oracle.jdbc.OracleDriver" hostname="localhost" port="1521" username="datical_user" password="cGFzc3dvcmQ=" contexts="DEV" defaultSchemaName="DP1" serviceName="orcl" enableCompression="false"/>
+  <dbDefs xsi:type="dbproject:OracleDbDef" name="DEV" driver="oracle.jdbc.OracleDriver" hostname="localhost" port="1521" username="import_user1[datical_user]" password="cGFzc3dvcmQ=" contexts="DEV" defaultSchemaName="DP1" serviceName="orcl" enableCompression="false"/>
   <dbDefs xsi:type="dbproject:OracleDbDef" name="PROD" driver="oracle.jdbc.OracleDriver" hostname="localhost" port="1521" username="datical_user" password="cGFzc3dvcmQ=" contexts="PROD" defaultSchemaName="DP2" serviceName="orcl" enableCompression="false"/>
   <plans name="Sep_2016" databaseDefs="//@dbDefs[name='DEV'] //@dbDefs[name='PROD']"/>
   <changelog href="Changelog/changelog.xml#//@databaseChangeLog"/>
