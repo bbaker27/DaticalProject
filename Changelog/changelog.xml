@@ -13,4 +13,10 @@
         </comment>
         <sqlFile path="sql/20160923093809740_select_from_dual2.sql" endDelimiter=";" splitStatements="true" stripComments="false" />
     </changeSet>
+    <changeSet author="bbaker27" id="20160928132300327_select_from_dual3" labels="select_from_dual3">
+        <comment>
+            add sql
+        </comment>
+        <sqlFile path="sql/20160928132300327_select_from_dual3.sql" endDelimiter=";" splitStatements="true" stripComments="false" />
+    </changeSet>
 </databaseChangeLog>
