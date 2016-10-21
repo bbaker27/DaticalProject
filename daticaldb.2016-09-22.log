@@ -1,0 +1,1030 @@
+18:37:28.291 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:37:28.298 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:37:28.478 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:37:28.482 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:37:28.486 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:37:28.491 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:37:28.515 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:37:28.516 [main] INFO  com.datical - initializing drivers
+18:37:28.522 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:37:28.522 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:37:28.526 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:37:29.420 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:37:30.346 [main] INFO  com.datical - initializing drivers
+18:37:30.591 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:37:35.499 [main] INFO  deployPackager - ==================================================
+18:37:35.500 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:37:35.500 [main] INFO  deployPackager - ==================================================
+18:37:35.500 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:37:35
+18:37:35.559 [main] INFO  deployPackager - PARAMETERS:
+18:37:35.563 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:37:35.563 [main] INFO  deployPackager -   scm:                true
+18:37:35.563 [main] INFO  deployPackager -   labels:             
+18:37:35.563 [main] INFO  deployPackager -   contexts:           
+18:37:35.564 [main] INFO  deployPackager -   preview:            true
+18:37:35.564 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:37:35.584 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:37:35.584 [main] INFO  deployPackager - 
+18:37:35.647 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:37:35.652 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:37:35.653 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:37:35.653 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:37:35.654 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:37:35.654 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:37:35.654 [main] INFO  deployPackager -   sqlScmPath           : '..\DaticalSQL'
+18:37:35.654 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:37:35.654 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:37:35.655 [main] INFO  deployPackager - 
+18:37:35.670 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:37:35.670 [main] DEBUG ScriptUtils -   Working Directory: .
+18:37:36.102 [main] DEBUG ScriptUtils - rc     : 0
+18:37:36.102 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:37:36.106 [main] DEBUG deployPackager - Running git status for sqlScmPath at ..\DaticalSQL
+18:37:36.109 [main] DEBUG ScriptUtils - sysExec command: git status
+18:37:36.109 [main] DEBUG ScriptUtils -   Working Directory: ..\DaticalSQL
+18:37:36.109 [main] DEBUG ScriptUtils - rc     : 1
+18:37:36.114 [main] DEBUG ScriptUtils - stderr : java.io.IOException: Cannot run program "git" (in directory "..\DaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:37:36.115 [main] ERROR deployPackager - Error getting status for sqlScmPath at ..\DaticalSQL
+18:37:36.115 [main] ERROR deployPackager - java.io.IOException: Cannot run program "git" (in directory "..\DaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:37:36.116 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:37:36.116 [main] DEBUG ScriptUtils - sysExec command: git status
+18:37:36.116 [main] DEBUG ScriptUtils -   Working Directory: .
+18:37:36.260 [main] DEBUG ScriptUtils - rc     : 0
+18:37:36.262 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	deployPackager.properties
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+18:37:36.281 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:37:36.284 [main] ERROR deployPackager - Datical has detected untracked files in the local Git repo ddbScmPath at .. Please commit or ignore the affected files before running the Deployment Packager
+18:37:36.288 [main] INFO  deployPackager - 
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	deployPackager.properties
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+18:37:36.308 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.
+18:39:37.886 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:39:37.891 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:39:38.063 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:39:38.067 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:39:38.071 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:39:38.076 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:39:38.103 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:39:38.104 [main] INFO  com.datical - initializing drivers
+18:39:38.110 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:39:38.111 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:39:38.114 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:39:39.050 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:39:39.855 [main] INFO  com.datical - initializing drivers
+18:39:40.109 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:39:44.929 [main] INFO  deployPackager - ==================================================
+18:39:44.929 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:39:44.930 [main] INFO  deployPackager - ==================================================
+18:39:44.930 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:39:44
+18:39:44.977 [main] INFO  deployPackager - PARAMETERS:
+18:39:44.977 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:39:44.977 [main] INFO  deployPackager -   scm:                true
+18:39:44.977 [main] INFO  deployPackager -   labels:             
+18:39:44.977 [main] INFO  deployPackager -   contexts:           
+18:39:44.978 [main] INFO  deployPackager -   preview:            true
+18:39:44.978 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:39:45.000 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:39:45.000 [main] INFO  deployPackager - 
+18:39:45.069 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:39:45.073 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:39:45.074 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:39:45.074 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:39:45.074 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:39:45.075 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:39:45.075 [main] INFO  deployPackager -   sqlScmPath           : '..\DaticalSQL'
+18:39:45.075 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:39:45.075 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:39:45.076 [main] INFO  deployPackager - 
+18:39:45.093 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:39:45.093 [main] DEBUG ScriptUtils -   Working Directory: .
+18:39:45.243 [main] DEBUG ScriptUtils - rc     : 0
+18:39:45.244 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:39:45.248 [main] DEBUG deployPackager - Running git status for sqlScmPath at ..\DaticalSQL
+18:39:45.251 [main] DEBUG ScriptUtils - sysExec command: git status
+18:39:45.251 [main] DEBUG ScriptUtils -   Working Directory: ..\DaticalSQL
+18:39:45.252 [main] DEBUG ScriptUtils - rc     : 1
+18:39:45.257 [main] DEBUG ScriptUtils - stderr : java.io.IOException: Cannot run program "git" (in directory "..\DaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:39:45.258 [main] ERROR deployPackager - Error getting status for sqlScmPath at ..\DaticalSQL
+18:39:45.258 [main] ERROR deployPackager - java.io.IOException: Cannot run program "git" (in directory "..\DaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:39:45.258 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:39:45.259 [main] DEBUG ScriptUtils - sysExec command: git status
+18:39:45.259 [main] DEBUG ScriptUtils -   Working Directory: .
+18:39:45.435 [main] DEBUG ScriptUtils - rc     : 0
+18:39:45.436 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:39:45.453 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:39:45.456 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:39:45.485 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.
+18:42:36.572 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:42:36.577 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:42:36.786 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:42:36.790 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:42:36.795 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:42:36.800 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:42:36.824 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:42:36.825 [main] INFO  com.datical - initializing drivers
+18:42:36.833 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:42:36.833 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:42:36.837 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:42:37.852 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:42:38.708 [main] INFO  com.datical - initializing drivers
+18:42:38.990 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:42:44.009 [main] INFO  deployPackager - ==================================================
+18:42:44.009 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:42:44.010 [main] INFO  deployPackager - ==================================================
+18:42:44.010 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:42:43
+18:42:44.056 [main] INFO  deployPackager - PARAMETERS:
+18:42:44.056 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:42:44.057 [main] INFO  deployPackager -   scm:                true
+18:42:44.057 [main] INFO  deployPackager -   labels:             
+18:42:44.057 [main] INFO  deployPackager -   contexts:           
+18:42:44.058 [main] INFO  deployPackager -   preview:            true
+18:42:44.058 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:42:44.084 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:42:44.085 [main] INFO  deployPackager - 
+18:42:44.159 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:42:44.164 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:42:44.165 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:42:44.165 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:42:44.165 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:42:44.165 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:42:44.165 [main] INFO  deployPackager -   sqlScmPath           : 'C:UsersBillgitDaticalSQL'
+18:42:44.166 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:42:44.166 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:42:44.167 [main] INFO  deployPackager - 
+18:42:44.179 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:42:44.179 [main] DEBUG ScriptUtils -   Working Directory: .
+18:42:44.366 [main] DEBUG ScriptUtils - rc     : 0
+18:42:44.366 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:42:44.369 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:UsersBillgitDaticalSQL
+18:42:44.371 [main] DEBUG ScriptUtils - sysExec command: git status
+18:42:44.371 [main] DEBUG ScriptUtils -   Working Directory: C:UsersBillgitDaticalSQL
+18:42:44.371 [main] DEBUG ScriptUtils - rc     : 1
+18:42:44.376 [main] DEBUG ScriptUtils - stderr : java.io.IOException: Cannot run program "git" (in directory "C:UsersBillgitDaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:42:44.378 [main] ERROR deployPackager - Error getting status for sqlScmPath at C:UsersBillgitDaticalSQL
+18:42:44.378 [main] ERROR deployPackager - java.io.IOException: Cannot run program "git" (in directory "C:UsersBillgitDaticalSQL"): CreateProcess error=267, The directory name is invalid
+18:42:44.378 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:42:44.378 [main] DEBUG ScriptUtils - sysExec command: git status
+18:42:44.378 [main] DEBUG ScriptUtils -   Working Directory: .
+18:42:44.513 [main] DEBUG ScriptUtils - rc     : 0
+18:42:44.514 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:42:44.530 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:42:44.531 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:42:44.552 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.
+18:44:06.780 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:44:06.785 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:44:06.965 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:44:06.971 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:44:06.976 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:44:06.982 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:44:07.007 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:44:07.008 [main] INFO  com.datical - initializing drivers
+18:44:07.015 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:44:07.016 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:44:07.019 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:44:07.947 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:44:08.800 [main] INFO  com.datical - initializing drivers
+18:44:09.029 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:44:13.789 [main] INFO  deployPackager - ==================================================
+18:44:13.790 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:44:13.795 [main] INFO  deployPackager - ==================================================
+18:44:13.796 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:44:13
+18:44:13.836 [main] INFO  deployPackager - PARAMETERS:
+18:44:13.836 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:44:13.837 [main] INFO  deployPackager -   scm:                true
+18:44:13.837 [main] INFO  deployPackager -   labels:             
+18:44:13.837 [main] INFO  deployPackager -   contexts:           
+18:44:13.837 [main] INFO  deployPackager -   preview:            true
+18:44:13.837 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:44:13.858 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:44:13.859 [main] INFO  deployPackager - 
+18:44:13.911 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:44:13.915 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:44:13.916 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:44:13.917 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:44:13.917 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:44:13.917 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:44:13.917 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:44:13.917 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:44:13.918 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:44:13.918 [main] INFO  deployPackager - 
+18:44:13.930 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:44:13.930 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.088 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.089 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:44:14.092 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:44:14.094 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:14.095 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:44:14.201 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.201 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:14.219 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:44:14.219 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:44:14.219 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:44:14.220 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:14.220 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.376 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.376 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:14.377 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:44:14.377 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:44:14.380 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:44:14.388 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.523 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.523 [main] DEBUG ScriptUtils - stdout : * master
+
+18:44:14.524 [main] INFO  deployPackager - Current git branch is master
+18:44:14.525 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:44:14.526 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.658 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.659 [main] DEBUG ScriptUtils - stdout : * master
+
+18:44:14.659 [main] INFO  deployPackager - Current git branch is master
+18:44:14.661 [main] DEBUG deployPackager - already on branch master
+18:44:14.661 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:44:14.661 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.789 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.790 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:44:14.790 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:44:14.790 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:14.791 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:14.918 [main] DEBUG ScriptUtils - rc     : 0
+18:44:14.918 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:14.919 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:44:14.919 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:44:14.920 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy '.'
+18:44:14.921 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:44:14.921 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:16.407 [main] DEBUG ScriptUtils - rc     : 0
+18:44:16.407 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:44:16.428 [main] DEBUG deployPackager - here:  null returning sqlScmLastImportID
+18:44:16.428 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:44:16.429 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:44:16.429 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:44:16.429 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:44:16.429 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:44:16.429 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:44:16.430 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:44:16.430 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:44:16.431 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:44:16.431 [main] INFO  deployPackager - 
+18:44:16.432 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:44:16.432 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:44:16.432 [main] INFO  deployPackager - 
+18:44:16.434 [main] INFO  deployPackager - PROJECT PRE-CHECKS:
+18:44:16.435 [main] INFO  deployPackager -   In a Datical DB Project.
+18:44:16.598 [main] INFO  deployPackager -   Pipeline is valid.
+18:44:16.640 [main] INFO  SchemaExpander - Schema names DO NOT HAVE properties
+18:44:16.641 [main] INFO  SchemaExpander - The project DeployPackager has no unexpanded schema names
+18:44:16.641 [main] INFO  deployPackager - 
+18:44:16.642 [main] INFO  deployPackager - BRANCH SPECIFICATION PRE-CHECKS:
+18:44:16.642 [main] DEBUG deployPackager - sqlBranch: null, ddbBranch: master
+18:44:16.642 [main] DEBUG deployPackager - sqlRepo: C:\Users\Bill\git\DaticalSQL, ddbRepo: .
+18:44:16.643 [main] INFO  deployPackager - 
+18:44:16.644 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:44:16.644 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:16.644 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:44:16.825 [main] DEBUG ScriptUtils - rc     : 0
+18:44:16.825 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:16.827 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:44:16.828 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:44:16.828 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy 'C:\Users\Bill\git\DaticalSQL'
+18:44:16.828 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:44:16.829 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:44:18.252 [main] DEBUG ScriptUtils - rc     : 0
+18:44:18.252 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:44:18.266 [main] DEBUG deployPackager - PackagerMetadata constructed with topDir of C:\Users\Bill\git\DaticalSQL\sql_code
+18:44:18.266 [main] DEBUG deployPackager - getting 'git' scm info in 'C:\Users\Bill\git\DaticalSQL' only in dir 'sql_code' since 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:44:18.267 [main] DEBUG deployPackager - scmWorkingDir: C:\Users\Bill\git\DaticalSQL
+18:44:18.267 [main] DEBUG deployPackager - interestingDir: sql_code
+18:44:18.268 [main] DEBUG deployPackager - lastImportId is 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:44:18.269 [main] DEBUG ScriptUtils - sysExec command: git log --reverse --pretty=format:'%h, %an, %s' --abbrev-commit 6f58daa472f5544a9f9711a9411dad36644a50fb..HEAD
+18:44:18.269 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:44:18.387 [main] DEBUG ScriptUtils - rc     : 0
+18:44:18.396 [main] INFO  deployPackager - SQL SCM:
+18:44:18.399 [main] INFO  deployPackager -   Found 0 items with 0 files to package. There are 0 stored logic drops.
+18:44:18.399 [main] INFO  deployPackager -   ID         AUTHOR               COMMENT                        LABELS
+18:44:18.401 [main] INFO  deployPackager - DATICAL PROJECT:
+18:44:18.402 [main] INFO  deployPackager -   name:               DeployPackager
+18:44:18.402 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:44:18.402 [main] INFO  deployPackager -   reference:          DEV
+18:44:18.402 [main] INFO  deployPackager -   vendor:             oracle
+18:44:18.413 [main] INFO  deployPackager - ==================================================
+18:44:18.414 [main] INFO  deployPackager - DATICAL DB: DEPLOY PACKAGER COMPLETED SUCCESSFULLY
+18:44:18.414 [main] INFO  deployPackager - --------------------------------------------------
+18:44:18.414 [main] INFO  deployPackager - Files: No files to process.
+18:44:18.414 [main] INFO  deployPackager - END:      2016-09-22-18:44:18
+18:44:18.414 [main] INFO  deployPackager - DURATION: 4.662 seconds
+18:44:18.414 [main] INFO  deployPackager - ==================================================
+18:44:18.417 [main] DEBUG deployPackager - switching back to branch master in directory .
+18:44:18.417 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:44:18.417 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:18.617 [main] DEBUG ScriptUtils - rc     : 0
+18:44:18.617 [main] DEBUG ScriptUtils - stdout : * master
+
+18:44:18.618 [main] INFO  deployPackager - Current git branch is master
+18:44:18.618 [main] DEBUG deployPackager - already on branch master
+18:44:18.618 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:44:18.618 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:18.618 [main] DEBUG ScriptUtils -   Working Directory: .
+18:44:18.917 [main] DEBUG ScriptUtils - rc     : 0
+18:44:18.918 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:18.918 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:44:18.938 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:44:18.938 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:44:18.939 [main] DEBUG ScriptUtils - sysExec command: git status
+18:44:18.939 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:44:19.218 [main] DEBUG ScriptUtils - rc     : 0
+18:44:19.218 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:44:19.219 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:44:19.220 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:44:19.241 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.
+18:48:56.794 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:48:56.800 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:48:56.982 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:48:56.988 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:48:56.993 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:48:56.997 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:48:57.021 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:48:57.021 [main] INFO  com.datical - initializing drivers
+18:48:57.026 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:48:57.026 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:48:57.030 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:48:57.922 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:48:58.716 [main] INFO  com.datical - initializing drivers
+18:48:58.947 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:49:04.175 [main] INFO  deployPackager - ==================================================
+18:49:04.175 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:49:04.175 [main] INFO  deployPackager - ==================================================
+18:49:04.175 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:49:04
+18:49:04.213 [main] INFO  deployPackager - PARAMETERS:
+18:49:04.214 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:49:04.214 [main] INFO  deployPackager -   scm:                true
+18:49:04.214 [main] INFO  deployPackager -   labels:             
+18:49:04.214 [main] INFO  deployPackager -   contexts:           
+18:49:04.214 [main] INFO  deployPackager -   preview:            true
+18:49:04.214 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:49:04.234 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:49:04.235 [main] INFO  deployPackager - 
+18:49:04.287 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:49:04.291 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:49:04.292 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:49:04.292 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:49:04.292 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:49:04.292 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:49:04.293 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:49:04.293 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:49:04.293 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:49:04.294 [main] INFO  deployPackager - 
+18:49:04.307 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:49:04.307 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:04.496 [main] DEBUG ScriptUtils - rc     : 0
+18:49:04.497 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:49:04.501 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:49:04.504 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:04.504 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:04.647 [main] DEBUG ScriptUtils - rc     : 0
+18:49:04.647 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:04.664 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:49:04.665 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:49:04.665 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:49:04.665 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:04.665 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:04.786 [main] DEBUG ScriptUtils - rc     : 0
+18:49:04.787 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:04.787 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:49:04.788 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:49:04.790 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:49:04.791 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:04.920 [main] DEBUG ScriptUtils - rc     : 0
+18:49:04.920 [main] DEBUG ScriptUtils - stdout : * master
+
+18:49:04.921 [main] INFO  deployPackager - Current git branch is master
+18:49:04.922 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:49:04.922 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:05.049 [main] DEBUG ScriptUtils - rc     : 0
+18:49:05.049 [main] DEBUG ScriptUtils - stdout : * master
+
+18:49:05.049 [main] INFO  deployPackager - Current git branch is master
+18:49:05.051 [main] DEBUG deployPackager - already on branch master
+18:49:05.051 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:49:05.051 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:05.170 [main] DEBUG ScriptUtils - rc     : 0
+18:49:05.170 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:49:05.171 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:49:05.171 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:05.171 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:05.306 [main] DEBUG ScriptUtils - rc     : 0
+18:49:05.306 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:05.306 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:49:05.307 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:49:05.308 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy '.'
+18:49:05.309 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:49:05.309 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:07.493 [main] DEBUG ScriptUtils - rc     : 0
+18:49:07.493 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:49:07.521 [main] DEBUG deployPackager - here:  null returning sqlScmLastImportID
+18:49:07.522 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:49:07.522 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:49:07.522 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:49:07.523 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:49:07.523 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:49:07.523 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:49:07.523 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:49:07.523 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:49:07.524 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:49:07.524 [main] INFO  deployPackager - 
+18:49:07.525 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:49:07.525 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:49:07.525 [main] INFO  deployPackager - 
+18:49:07.526 [main] INFO  deployPackager - PROJECT PRE-CHECKS:
+18:49:07.527 [main] INFO  deployPackager -   In a Datical DB Project.
+18:49:07.680 [main] INFO  deployPackager -   Pipeline is valid.
+18:49:07.707 [main] INFO  SchemaExpander - Schema names DO NOT HAVE properties
+18:49:07.708 [main] INFO  SchemaExpander - The project DeployPackager has no unexpanded schema names
+18:49:07.709 [main] INFO  deployPackager - 
+18:49:07.710 [main] INFO  deployPackager - BRANCH SPECIFICATION PRE-CHECKS:
+18:49:07.710 [main] DEBUG deployPackager - sqlBranch: null, ddbBranch: master
+18:49:07.710 [main] DEBUG deployPackager - sqlRepo: C:\Users\Bill\git\DaticalSQL, ddbRepo: .
+18:49:07.710 [main] INFO  deployPackager - 
+18:49:07.711 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:49:07.711 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:07.711 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:07.943 [main] DEBUG ScriptUtils - rc     : 0
+18:49:07.944 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:07.945 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:49:07.946 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:49:07.946 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy 'C:\Users\Bill\git\DaticalSQL'
+18:49:07.947 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:49:07.947 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:10.229 [main] DEBUG ScriptUtils - rc     : 0
+18:49:10.229 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:49:10.245 [main] DEBUG deployPackager - PackagerMetadata constructed with topDir of C:\Users\Bill\git\DaticalSQL\sql_code
+18:49:10.246 [main] DEBUG deployPackager - getting 'git' scm info in 'C:\Users\Bill\git\DaticalSQL' only in dir 'sql_code' since 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:49:10.247 [main] DEBUG deployPackager - scmWorkingDir: C:\Users\Bill\git\DaticalSQL
+18:49:10.247 [main] DEBUG deployPackager - interestingDir: sql_code
+18:49:10.247 [main] DEBUG deployPackager - lastImportId is 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:49:10.249 [main] DEBUG ScriptUtils - sysExec command: git log --reverse --pretty=format:'%h, %an, %s' --abbrev-commit 6f58daa472f5544a9f9711a9411dad36644a50fb..HEAD
+18:49:10.249 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:10.359 [main] DEBUG ScriptUtils - rc     : 0
+18:49:10.360 [main] DEBUG ScriptUtils - stdout : 'aab30b5, bbaker27, adding sql2'
+
+18:49:10.368 [main] DEBUG ScriptUtils - sysExec command: git show --name-status --pretty=format:'%h, %an, %s' aab30b5
+18:49:10.369 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:10.467 [main] DEBUG ScriptUtils - rc     : 0
+18:49:10.468 [main] DEBUG ScriptUtils - stdout : 'aab30b5, bbaker27, adding sql2'
+A	sql_code/data_dml/select_from_dual2.sql
+
+18:49:10.474 [main] DEBUG deployPackager - parsed line A	sql_code/data_dml/select_from_dual2.sql scmOperation added and file sql_code/data_dml/select_from_dual2.sql
+18:49:10.475 [main] DEBUG SCMUtils - Qualified sub-directory candidate is sql_code\data_dml\select_from_dual2.sql
+18:49:10.480 [main] DEBUG SCMUtils - Should file 'sql_code\data_dml\select_from_dual2.sql' be processed? interesting dir = sql_code
+18:49:10.481 [main] DEBUG SCMUtils -   sql_code\data_dml\select_from_dual2.sql should be processed
+18:49:10.481 [main] DEBUG deployPackager - Packaging file object: sql_code/data_dml/select_from_dual2.sql
+18:49:10.483 [main] DEBUG SCMUtils -  checking to see if sql_code\data_dml\select_from_dual2.sql is already mentioned in item aab30b5
+18:49:10.486 [main] DEBUG SCMUtils - Assigned labels: [] to file sql_code/data_dml/select_from_dual2.sql
+18:49:10.487 [main] DEBUG SCMUtils -  is there a rollback file for C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql ?
+18:49:10.494 [main] DEBUG SCMUtils -     nope, no rollback file
+18:49:10.498 [main] DEBUG SCMUtils - Running git show --follow for aab30b5 : sql_code/data_dml/select_from_dual2.sql
+18:49:10.498 [main] DEBUG ScriptUtils - sysExec command: git show --follow aab30b5 sql_code/data_dml/select_from_dual2.sql
+18:49:10.498 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:10.619 [main] DEBUG ScriptUtils - rc     : 0
+18:49:10.619 [main] DEBUG ScriptUtils - stdout : commit aab30b553e0393b336ce9f4e9a146011558939a1
+Author: bbaker27 <bbaker@datical.com>
+Date:   Thu Sep 22 18:48:41 2016 -0500
+
+    adding sql2
+
+diff --git a/sql_code/data_dml/select_from_dual.sql b/sql_code/data_dml/select_from_dual2.sql
+similarity index 100%
+copy from sql_code/data_dml/select_from_dual.sql
+copy to sql_code/data_dml/select_from_dual2.sql
+
+18:49:10.620 [main] DEBUG SCMUtils - Output from git show --follow commit aab30b553e0393b336ce9f4e9a146011558939a1
+Author: bbaker27 <bbaker@datical.com>
+Date:   Thu Sep 22 18:48:41 2016 -0500
+
+    adding sql2
+
+diff --git a/sql_code/data_dml/select_from_dual.sql b/sql_code/data_dml/select_from_dual2.sql
+similarity index 100%
+copy from sql_code/data_dml/select_from_dual.sql
+copy to sql_code/data_dml/select_from_dual2.sql
+
+18:49:10.622 [main] INFO  SCMUtils - Processed renamed file information for sql_code/data_dml/select_from_dual2.sql
+18:49:10.622 [main] DEBUG SCMUtils - scmGetRenameInfo returned: [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:49:10.623 [main] DEBUG SCMUtils - Is this a rename operation and do we have both renamedFile and newFile names ? [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]: NO
+18:49:10.623 [main] DEBUG SCMUtils - The item [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:49:10.623 [main] DEBUG SCMUtils - is not a rename operation
+18:49:10.636 [main] DEBUG SCMUtils - Current labels for key sql_code/data_dml/select_from_dual2.sql are now 
+18:49:10.637 [main] DEBUG SCMUtils - addToDropMapIfNeeded analyzing: added [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:49:10.646 [main] INFO  deployPackager - SQL SCM:
+18:49:10.653 [main] INFO  deployPackager -   Found 1 items with 1 files to package. There are 0 stored logic drops.
+18:49:10.654 [main] INFO  deployPackager -   ID         AUTHOR               COMMENT                        LABELS
+18:49:10.657 [main] INFO  deployPackager -   aab30b5    bbaker27             adding sql2                    []
+18:49:10.658 [main] INFO  deployPackager -   Item id aab30b5 has 1 files not already noted
+18:49:10.658 [main] INFO  deployPackager -      TYPE       ACTION     FILENAME/ROLLBACKFILE
+18:49:10.659 [main] INFO  deployPackager -      data_dml   sqlfile    C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:49:10.660 [main] INFO  deployPackager -                            -no rollback found-
+18:49:10.660 [main] INFO  deployPackager - DATICAL PROJECT:
+18:49:10.660 [main] INFO  deployPackager -   name:               DeployPackager
+18:49:10.660 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:49:10.660 [main] INFO  deployPackager -   reference:          DEV
+18:49:10.660 [main] INFO  deployPackager -   vendor:             oracle
+18:49:10.660 [main] INFO  deployPackager - --------------------------------------------------
+18:49:10.660 [main] INFO  deployPackager -  RUNNING SQL Rules
+18:49:10.660 [main] INFO  deployPackager - --------------------------------------------------
+18:49:10.664 [main] INFO  deployPackager -   Checking SQL Rules for File: C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:49:10.664 [main] INFO  deployPackager - 
+18:49:10.664 [main] INFO  deployPackager - command: hammer runRules 
+18:49:10.664 [main] INFO  deployPackager - C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql 
+18:49:10.664 [main] INFO  deployPackager - 
+
+18:49:10.820 [main] DEBUG o.drools.core.impl.KnowledgeBaseImpl - Starting Engine in RETEOO mode
+18:49:11.557 [main] INFO  deployPackager - runRules successful for SQL file 'C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql'
+18:49:11.557 [main] INFO  deployPackager - PASSES SQL Rules!
+18:49:11.558 [main] INFO  deployPackager - --------------------------------------------------
+18:49:11.558 [main] INFO  deployPackager -  PREVIEWING DEPLOY PACKAGER
+18:49:11.558 [main] INFO  deployPackager - --------------------------------------------------
+18:49:11.669 [main] WARN  deployPackager - There are no labels keys in the properties file C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\metadata.properties.
+
+18:49:11.669 [main] WARN  deployPackager - There are no contexts keys in the properties file C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\metadata.properties.
+
+18:49:11.674 [main] INFO  deployPackager - Loaded properties from file C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\metadata.properties
+18:49:11.677 [main] DEBUG deployPackager - Combined labels are: 
+18:49:11.680 [main] DEBUG deployPackager - considering SQL file C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:49:11.682 [main] INFO  deployPackager -     DEPLOY_FILE:   C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:49:11.683 [main] INFO  deployPackager -     ROLLBACK_FILE: null
+18:49:11.683 [main] INFO  deployPackager -               ID       :aab30b5
+18:49:11.684 [main] INFO  deployPackager -               LABELs   :
+18:49:11.684 [main] INFO  deployPackager -               CONTEXTs :null
+18:49:11.684 [main] INFO  deployPackager -               AUTHOR   :bbaker27
+18:49:11.685 [main] INFO  deployPackager -               COMMENT  :adding sql2
+18:49:11.685 [main] INFO  deployPackager -       SUCCESS preview:deployPackagerNative
+18:49:11.685 [main] INFO  deployPackager - RETURN CODE from packaging:0
+18:49:11.742 [main] INFO  deployPackager - ==================================================
+18:49:11.742 [main] INFO  deployPackager - DATICAL DB: SUCCESS Previewing DEPLOY PACKAGER
+18:49:11.742 [main] INFO  deployPackager - ==================================================
+18:49:11.742 [main] INFO  deployPackager -   Found 1 items with 1 files to package. There are 0 stored logic drops.
+18:49:11.743 [main] INFO  deployPackager -   ID         AUTHOR               COMMENT                        LABELS
+18:49:11.743 [main] INFO  deployPackager -   aab30b5    bbaker27             adding sql2                    []
+18:49:11.743 [main] INFO  deployPackager -   Item id aab30b5 has 1 files not already noted
+18:49:11.743 [main] INFO  deployPackager -      TYPE       ACTION     FILENAME/ROLLBACKFILE
+18:49:11.744 [main] INFO  deployPackager -      data_dml   sqlfile    C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:49:11.744 [main] INFO  deployPackager -                            -no rollback found-
+18:49:11.745 [main] INFO  deployPackager - END:      2016-09-22-18:49:11
+18:49:11.745 [main] INFO  deployPackager - DURATION: 7.550 seconds
+18:49:11.745 [main] INFO  deployPackager - ==================================================
+18:49:11.748 [main] DEBUG deployPackager - switching back to branch master in directory .
+18:49:11.748 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:49:11.748 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:12.037 [main] DEBUG ScriptUtils - rc     : 0
+18:49:12.038 [main] DEBUG ScriptUtils - stdout : * master
+
+18:49:12.038 [main] INFO  deployPackager - Current git branch is master
+18:49:12.039 [main] DEBUG deployPackager - already on branch master
+18:49:12.039 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:49:12.039 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:12.039 [main] DEBUG ScriptUtils -   Working Directory: .
+18:49:12.191 [main] DEBUG ScriptUtils - rc     : 0
+18:49:12.192 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:12.192 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:49:12.193 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:49:12.193 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:49:12.193 [main] DEBUG ScriptUtils - sysExec command: git status
+18:49:12.193 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:49:12.332 [main] DEBUG ScriptUtils - rc     : 0
+18:49:12.332 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:49:12.333 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:49:12.334 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:49:12.353 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.
+18:49:54.116 [Component Resolve Thread] INFO  c.d.j.osgi.AcceleratorDriverService - Activating AcceleratorDriverService.
+18:49:54.122 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.datical.jdbc.oracle.DaticalOracleDriver
+18:49:54.295 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.microsoft.sqlserver.jdbc.SQLServerDriver
+18:49:54.300 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver oracle.jdbc.OracleDriver
+18:49:54.304 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver com.ibm.db2.jcc.DB2Driver
+18:49:54.308 [Component Resolve Thread] INFO  com.datical.jdbc.osgi.DriverConsumer - DaticalJDBC notified of potential delegate driver org.postgresql.Driver
+18:49:54.330 [main] INFO  com.datical.hammer.repl.Main - Starting DaticalDB REPL. Version 4.2.3218.20160802105704  1470153575176
+18:49:54.331 [main] INFO  com.datical - initializing drivers
+18:49:54.337 [main] INFO  com.datical -   No driver path was specified by properties or on command line.
+18:49:54.337 [main] DEBUG com.datical.hammer.repl.Main - Extensions found: [liquibase-appdba, liquibase-storedlogic]
+18:49:54.340 [main] DEBUG com.datical.hammer.repl.Main - Using sqlplus located at 'C:\Users\Bill\DaticalDB_4.2.3218\repl\..\instantclient'
+18:49:55.240 [main] INFO  com.datical.hammer.repl.Main - Licensing Information:
+Datical DB Admin License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:30:03 CST 2015
+Expires on: Thu Nov 10 09:30:03 CST 2016
+
+Datical DB Accelerator License
+Issued to : CN=This is not a real license! Do Not Distribute
+Issued on : Wed Nov 11 09:32:21 CST 2015
+Expires on: Thu Nov 10 09:32:21 CST 2016
+
+
+18:49:56.080 [main] INFO  com.datical - initializing drivers
+18:49:56.305 [main] INFO  com.datical - loaded JDBC drivers sucessfully
+18:50:01.078 [main] INFO  deployPackager - ==================================================
+18:50:01.078 [main] INFO  deployPackager - DATICAL DB: Packaging SQL Script(s) 
+18:50:01.078 [main] INFO  deployPackager - ==================================================
+18:50:01.079 [main] INFO  deployPackager - BEGIN: 2016-09-22-18:50:01
+18:50:01.119 [main] INFO  deployPackager - PARAMETERS:
+18:50:01.119 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:50:01.120 [main] INFO  deployPackager -   scm:                true
+18:50:01.120 [main] INFO  deployPackager -   labels:             dual
+18:50:01.132 [main] INFO  deployPackager -   contexts:           
+18:50:01.133 [main] INFO  deployPackager -   preview:            false
+18:50:01.133 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:50:01.158 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:50:01.159 [main] INFO  deployPackager - 
+18:50:01.219 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:50:01.226 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:50:01.227 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:50:01.228 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:50:01.228 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:50:01.228 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:50:01.229 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:50:01.229 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:50:01.229 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:50:01.230 [main] INFO  deployPackager - 
+18:50:01.244 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:50:01.245 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:01.493 [main] DEBUG ScriptUtils - rc     : 0
+18:50:01.493 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:50:01.497 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:50:01.500 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:01.500 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:01.623 [main] DEBUG ScriptUtils - rc     : 0
+18:50:01.623 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:01.637 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:50:01.638 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:50:01.638 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:50:01.638 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:01.638 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:01.767 [main] DEBUG ScriptUtils - rc     : 0
+18:50:01.767 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:01.768 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:50:01.768 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:50:01.770 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:50:01.772 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:01.891 [main] DEBUG ScriptUtils - rc     : 0
+18:50:01.891 [main] DEBUG ScriptUtils - stdout : * master
+
+18:50:01.892 [main] INFO  deployPackager - Current git branch is master
+18:50:01.893 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:50:01.893 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:01.998 [main] DEBUG ScriptUtils - rc     : 0
+18:50:01.999 [main] DEBUG ScriptUtils - stdout : * master
+
+18:50:01.999 [main] INFO  deployPackager - Current git branch is master
+18:50:02.000 [main] DEBUG deployPackager - already on branch master
+18:50:02.000 [main] DEBUG ScriptUtils - sysExec command: git check-ignore --verbose daticaldb.log
+18:50:02.000 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:02.111 [main] DEBUG ScriptUtils - rc     : 0
+18:50:02.111 [main] DEBUG ScriptUtils - stdout : .gitignore:10:*.log	daticaldb.log
+
+18:50:02.112 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:50:02.112 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:02.112 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:02.245 [main] DEBUG ScriptUtils - rc     : 0
+18:50:02.245 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:02.246 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:50:02.246 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:50:02.247 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy '.'
+18:50:02.248 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:50:02.248 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:08.153 [main] DEBUG ScriptUtils - rc     : 0
+18:50:08.154 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:50:08.176 [main] DEBUG deployPackager - here:  null returning sqlScmLastImportID
+18:50:08.177 [main] INFO  deployPackager - PACKAGER PROPERTIES:
+18:50:08.178 [main] INFO  deployPackager -   ddbScmBranch         : 'master'
+18:50:08.178 [main] INFO  deployPackager -   ddbScmLastImportID   : '266fde8a07d244ed51a64dba912a7956e20c8b56'
+18:50:08.178 [main] INFO  deployPackager -   ddbScmPath           : '.'
+18:50:08.179 [main] INFO  deployPackager -   ddbScmSystem         : 'git'
+18:50:08.179 [main] INFO  deployPackager -   sqlScmLastImportID   : '6f58daa472f5544a9f9711a9411dad36644a50fb'
+18:50:08.179 [main] INFO  deployPackager -   sqlScmPath           : 'C:\Users\Bill\git\DaticalSQL'
+18:50:08.179 [main] INFO  deployPackager -   sqlScmSQLBaseDir     : 'sql_code'
+18:50:08.180 [main] INFO  deployPackager -   sqlScmSystem         : 'git'
+18:50:08.181 [main] INFO  deployPackager - 
+18:50:08.181 [main] INFO  deployPackager - ARGS PRE-CHECKS:
+18:50:08.183 [main] INFO  deployPackager -   Using scm as defined in deployPackager.properties
+18:50:08.183 [main] INFO  deployPackager - 
+18:50:08.184 [main] INFO  deployPackager - PROJECT PRE-CHECKS:
+18:50:08.184 [main] INFO  deployPackager -   In a Datical DB Project.
+18:50:08.343 [main] INFO  deployPackager -   Pipeline is valid.
+18:50:08.367 [main] INFO  SchemaExpander - Schema names DO NOT HAVE properties
+18:50:08.368 [main] INFO  SchemaExpander - The project DeployPackager has no unexpanded schema names
+18:50:08.369 [main] INFO  deployPackager - 
+18:50:08.369 [main] INFO  deployPackager - BRANCH SPECIFICATION PRE-CHECKS:
+18:50:08.370 [main] DEBUG deployPackager - sqlBranch: null, ddbBranch: master
+18:50:08.370 [main] DEBUG deployPackager - sqlRepo: C:\Users\Bill\git\DaticalSQL, ddbRepo: .
+18:50:08.370 [main] INFO  deployPackager - 
+18:50:08.372 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:50:08.372 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:08.373 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:08.548 [main] DEBUG ScriptUtils - rc     : 0
+18:50:08.548 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:08.549 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:50:08.549 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:50:08.549 [main] INFO  deployPackager - Getting latest revisions for 'git' working copy 'C:\Users\Bill\git\DaticalSQL'
+18:50:08.550 [main] DEBUG ScriptUtils - sysExec command: git pull
+18:50:08.550 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:12.106 [main] DEBUG ScriptUtils - rc     : 0
+18:50:12.106 [main] DEBUG ScriptUtils - stdout : Already up-to-date.
+
+18:50:12.123 [main] DEBUG deployPackager - PackagerMetadata constructed with topDir of C:\Users\Bill\git\DaticalSQL\sql_code
+18:50:12.123 [main] DEBUG deployPackager - getting 'git' scm info in 'C:\Users\Bill\git\DaticalSQL' only in dir 'sql_code' since 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:50:12.124 [main] DEBUG deployPackager - scmWorkingDir: C:\Users\Bill\git\DaticalSQL
+18:50:12.124 [main] DEBUG deployPackager - interestingDir: sql_code
+18:50:12.124 [main] DEBUG deployPackager - lastImportId is 6f58daa472f5544a9f9711a9411dad36644a50fb
+18:50:12.126 [main] DEBUG ScriptUtils - sysExec command: git log --reverse --pretty=format:'%h, %an, %s' --abbrev-commit 6f58daa472f5544a9f9711a9411dad36644a50fb..HEAD
+18:50:12.126 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:12.244 [main] DEBUG ScriptUtils - rc     : 0
+18:50:12.244 [main] DEBUG ScriptUtils - stdout : 'aab30b5, bbaker27, adding sql2'
+
+18:50:12.251 [main] DEBUG ScriptUtils - sysExec command: git show --name-status --pretty=format:'%h, %an, %s' aab30b5
+18:50:12.251 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:12.391 [main] DEBUG ScriptUtils - rc     : 0
+18:50:12.391 [main] DEBUG ScriptUtils - stdout : 'aab30b5, bbaker27, adding sql2'
+A	sql_code/data_dml/select_from_dual2.sql
+
+18:50:12.396 [main] DEBUG deployPackager - parsed line A	sql_code/data_dml/select_from_dual2.sql scmOperation added and file sql_code/data_dml/select_from_dual2.sql
+18:50:12.398 [main] DEBUG SCMUtils - Qualified sub-directory candidate is sql_code\data_dml\select_from_dual2.sql
+18:50:12.405 [main] DEBUG SCMUtils - Should file 'sql_code\data_dml\select_from_dual2.sql' be processed? interesting dir = sql_code
+18:50:12.406 [main] DEBUG SCMUtils -   sql_code\data_dml\select_from_dual2.sql should be processed
+18:50:12.406 [main] DEBUG deployPackager - Packaging file object: sql_code/data_dml/select_from_dual2.sql
+18:50:12.408 [main] DEBUG SCMUtils -  checking to see if sql_code\data_dml\select_from_dual2.sql is already mentioned in item aab30b5
+18:50:12.412 [main] DEBUG SCMUtils - Assigned labels: [] to file sql_code/data_dml/select_from_dual2.sql
+18:50:12.413 [main] DEBUG SCMUtils -  is there a rollback file for C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql ?
+18:50:12.422 [main] DEBUG SCMUtils -     nope, no rollback file
+18:50:12.428 [main] DEBUG SCMUtils - Running git show --follow for aab30b5 : sql_code/data_dml/select_from_dual2.sql
+18:50:12.429 [main] DEBUG ScriptUtils - sysExec command: git show --follow aab30b5 sql_code/data_dml/select_from_dual2.sql
+18:50:12.429 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:12.544 [main] DEBUG ScriptUtils - rc     : 0
+18:50:12.544 [main] DEBUG ScriptUtils - stdout : commit aab30b553e0393b336ce9f4e9a146011558939a1
+Author: bbaker27 <bbaker@datical.com>
+Date:   Thu Sep 22 18:48:41 2016 -0500
+
+    adding sql2
+
+diff --git a/sql_code/data_dml/select_from_dual.sql b/sql_code/data_dml/select_from_dual2.sql
+similarity index 100%
+copy from sql_code/data_dml/select_from_dual.sql
+copy to sql_code/data_dml/select_from_dual2.sql
+
+18:50:12.544 [main] DEBUG SCMUtils - Output from git show --follow commit aab30b553e0393b336ce9f4e9a146011558939a1
+Author: bbaker27 <bbaker@datical.com>
+Date:   Thu Sep 22 18:48:41 2016 -0500
+
+    adding sql2
+
+diff --git a/sql_code/data_dml/select_from_dual.sql b/sql_code/data_dml/select_from_dual2.sql
+similarity index 100%
+copy from sql_code/data_dml/select_from_dual.sql
+copy to sql_code/data_dml/select_from_dual2.sql
+
+18:50:12.547 [main] INFO  SCMUtils - Processed renamed file information for sql_code/data_dml/select_from_dual2.sql
+18:50:12.548 [main] DEBUG SCMUtils - scmGetRenameInfo returned: [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:50:12.549 [main] DEBUG SCMUtils - Is this a rename operation and do we have both renamedFile and newFile names ? [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]: NO
+18:50:12.549 [main] DEBUG SCMUtils - The item [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:50:12.549 [main] DEBUG SCMUtils - is not a rename operation
+18:50:12.563 [main] DEBUG SCMUtils - Current labels for key sql_code/data_dml/select_from_dual2.sql are now 
+18:50:12.564 [main] DEBUG SCMUtils - addToDropMapIfNeeded analyzing: added [needNew:true, scmFile:sql_code/data_dml/select_from_dual2.sql, scmAuthor:bbaker27, filename:C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql, scmOperation:added, labels:[], type:data_dml, action:sqlfile, order:8, renamedFile:null, newFile:null]
+18:50:12.573 [main] INFO  deployPackager - SQL SCM:
+18:50:12.577 [main] INFO  deployPackager -   Found 1 items with 1 files to package. There are 0 stored logic drops.
+18:50:12.577 [main] INFO  deployPackager -   ID         AUTHOR               COMMENT                        LABELS
+18:50:12.582 [main] INFO  deployPackager -   aab30b5    bbaker27             adding sql2                    []
+18:50:12.582 [main] INFO  deployPackager -   Item id aab30b5 has 1 files not already noted
+18:50:12.582 [main] INFO  deployPackager -      TYPE       ACTION     FILENAME/ROLLBACKFILE
+18:50:12.584 [main] INFO  deployPackager -      data_dml   sqlfile    C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:50:12.585 [main] INFO  deployPackager -                            -no rollback found-
+18:50:12.585 [main] INFO  deployPackager - DATICAL PROJECT:
+18:50:12.585 [main] INFO  deployPackager -   name:               DeployPackager
+18:50:12.585 [main] INFO  deployPackager -   pipeline:           Sep_2016
+18:50:12.585 [main] INFO  deployPackager -   reference:          DEV
+18:50:12.585 [main] INFO  deployPackager -   vendor:             oracle
+18:50:12.585 [main] INFO  deployPackager - --------------------------------------------------
+18:50:12.586 [main] INFO  deployPackager -  RUNNING SQL Rules
+18:50:12.586 [main] INFO  deployPackager - --------------------------------------------------
+18:50:12.590 [main] INFO  deployPackager -   Checking SQL Rules for File: C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql
+18:50:12.591 [main] INFO  deployPackager - 
+18:50:12.591 [main] INFO  deployPackager - command: hammer runRules 
+18:50:12.591 [main] INFO  deployPackager - C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql 
+18:50:12.591 [main] INFO  deployPackager - 
+
+18:50:12.687 [main] DEBUG o.drools.core.impl.KnowledgeBaseImpl - Starting Engine in RETEOO mode
+18:50:13.418 [main] INFO  deployPackager - runRules successful for SQL file 'C:\Users\Bill\git\DaticalSQL\sql_code\data_dml\select_from_dual2.sql'
+18:50:13.419 [main] INFO  deployPackager - PASSES SQL Rules!
+18:50:13.421 [main] INFO  deployPackager - ==================================================
+18:50:13.421 [main] INFO  deployPackager - DATICALDB: BACKUP Database: DEV
+18:50:13.422 [main] INFO  deployPackager - ==================================================
+18:50:13.423 [main] WARN  deployPackager - Property databaseBackupRestoreLocation not set in deployPackager.properties
+18:50:13.423 [main] INFO  deployPackager - BACKING UP DATABASE: backup=DEV.dmp
+18:50:14.074 [main] DEBUG database_backup_restore - script started at Thu Sep 22 18:50:14 CDT 2016
+18:50:14.074 [main] DEBUG database_backup_restore - parameter count = 2
+18:50:14.076 [main] DEBUG database_backup_restore - creating directory: C:\Users\Bill\datical\DeployPackager\Resources\ddb_tools
+18:50:14.077 [main] DEBUG database_backup_restore - Directory created for C:\Users\Bill\datical\DeployPackager\Resources\ddb_tools
+18:50:14.102 [main] INFO  database_backup_restore - 
+***** Project Variables *****
+
+18:50:14.107 [main] INFO  database_backup_restore -    Project:             DeployPackager
+18:50:14.108 [main] INFO  database_backup_restore -    Description:         null
+18:50:14.108 [main] INFO  database_backup_restore -    Current directory:   C:\Users\Bill\datical\DeployPackager
+18:50:14.108 [main] INFO  database_backup_restore -    Install Dir Path:    C:\Users\Bill\DaticalDB_4.2.3218
+18:50:14.109 [main] INFO  database_backup_restore -    Hammer Path:         C:\Users\Bill\DaticalDB_4.2.3218\repl
+18:50:14.109 [main] INFO  database_backup_restore -    Launcher Path:       C:\Users\Bill\DaticalDB_4.2.3218\repl\hammer.bat
+18:50:14.109 [main] INFO  database_backup_restore -    Groovy Script Dir:   C:\Users\Bill\DaticalDB_4.2.3218\repl\scripts
+18:50:14.110 [main] INFO  database_backup_restore -    Groovy Script Path:  C:\Users\Bill\DaticalDB_4.2.3218\repl\scripts\database_backup_restore.groovy
+18:50:14.111 [main] INFO  database_backup_restore - 
+***** Get the database connection information *****
+
+18:50:14.112 [main] INFO  database_backup_restore -    pipeline:    Sep_2016
+18:50:14.114 [main] INFO  database_backup_restore - Found the DB Def (DEV) in the project.
+18:50:14.114 [main] INFO  database_backup_restore - 
+18:50:14.115 [main] INFO  database_backup_restore - Database Type: oracle
+18:50:14.117 [main] DEBUG database_backup_restore - args: DEV, backup=DEV.dmp
+18:50:14.117 [main] INFO  database_backup_restore - 
+***** Script Parameters *****
+
+18:50:14.118 [main] INFO  database_backup_restore -    Db Def Name:       DEV
+18:50:14.118 [main] INFO  database_backup_restore -    Backup:            true
+18:50:14.119 [main] INFO  database_backup_restore -      Backup File:     DEV.dmp
+18:50:14.119 [main] INFO  database_backup_restore -      Backup Log File: DEV.log
+18:50:14.119 [main] INFO  database_backup_restore -    Restore:           false
+18:50:14.120 [main] INFO  SchemaExpander - Schema names DO NOT HAVE properties
+18:50:14.121 [main] INFO  SchemaExpander - The project DeployPackager has no unexpanded schema names
+18:50:14.131 [main] INFO  database_backup_restore - Adding the user name dp1 to the schemas list
+18:50:14.131 [main] INFO  database_backup_restore - Schemas list: [dp1]
+18:50:14.149 [main] INFO  database_backup_restore - Operating on the following schema(s): dp1
+18:50:14.149 [main] INFO  database_backup_restore - 
+***** Checking for common problems *****
+
+18:50:15.825 [main] DEBUG database_backup_restore - Found expdp command.
+18:50:16.482 [main] DEBUG database_backup_restore - Found impdp command.
+18:50:16.483 [main] INFO  database_backup_restore - Checking for drivers
+18:50:16.704 [main] INFO  database_backup_restore - Drivers setup correctly.
+
+18:50:16.704 [main] DEBUG database_backup_restore - username = dp1
+18:50:16.704 [main] DEBUG database_backup_restore - defaultSchema = null
+18:50:16.706 [main] ERROR database_backup_restore - You cannot backup/restore a schema that is the same as the connection schema (dp1). Please specify a different connection schema in your dbDef (DEV) and re-run this script.
+18:50:16.707 [main] ERROR deployPackager - Error backing up database 'DEV'
+18:50:16.709 [main] DEBUG deployPackager - switching back to branch master in directory .
+18:50:16.709 [main] DEBUG ScriptUtils - sysExec command: git branch
+18:50:16.709 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:16.865 [main] DEBUG ScriptUtils - rc     : 0
+18:50:16.865 [main] DEBUG ScriptUtils - stdout : * master
+
+18:50:16.865 [main] INFO  deployPackager - Current git branch is master
+18:50:16.865 [main] DEBUG deployPackager - already on branch master
+18:50:16.866 [main] DEBUG deployPackager - Running git status for ddbScmPath at .
+18:50:16.866 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:16.866 [main] DEBUG ScriptUtils -   Working Directory: .
+18:50:17.050 [main] DEBUG ScriptUtils - rc     : 0
+18:50:17.050 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:17.050 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is now on branch master
+18:50:17.051 [main] INFO  deployPackager - Local Git repo ddbScmPath at . is up-to-date
+18:50:17.051 [main] DEBUG deployPackager - Running git status for sqlScmPath at C:\Users\Bill\git\DaticalSQL
+18:50:17.052 [main] DEBUG ScriptUtils - sysExec command: git status
+18:50:17.052 [main] DEBUG ScriptUtils -   Working Directory: C:\Users\Bill\git\DaticalSQL
+18:50:17.286 [main] DEBUG ScriptUtils - rc     : 0
+18:50:17.287 [main] DEBUG ScriptUtils - stdout : On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+18:50:17.287 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is now on branch master
+18:50:17.288 [main] INFO  deployPackager - Local Git repo sqlScmPath at C:\Users\Bill\git\DaticalSQL is up-to-date
+18:50:17.306 [main] INFO  c.d.j.osgi.AcceleratorDriverService - Deactivating AcceleratorDriverService.

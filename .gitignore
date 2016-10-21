@@ -2,9 +2,9 @@ Logs/
 Reports/
 Snapshots/
 Profiles/
-.metadata/
-.plugins/
-.reporttemplates
-daticaldb.properties
-daticaldb*.log
-*.log
+/.classpath
+/.metadata
+/.reporttemplates
+/daticaldb.properties
+/daticaldb.log
+/daticaldb_*.log
